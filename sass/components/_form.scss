@@ -14,6 +14,7 @@
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
+    transition: all 0.3s;
 
     &:focus {
       outline: none;
@@ -36,5 +37,25 @@
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
+    transition: all 0.3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__radio-group {
+    width: 50%;
+    display: inline;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+  }
+
+  &__radio-button {
   }
 }
