@@ -47,8 +47,12 @@
   }
 
   &__radio-group {
-    width: 50%;
-    display: inline;
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__radio-input {
+    display: none;
   }
 
   &__radio-label {
@@ -66,7 +70,7 @@
     display: inline-block;
     position: absolute;
     left: 0;
-    top: -0.2rem;
+    top: -0.4rem;
 
     &::after {
       content: "";
@@ -80,6 +84,11 @@
       transform: translate(-50%, -50%);
       background-color: $color-primary;
       opacity: 0;
+      transition: opacity 0.2s;
     }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
   }
 }
